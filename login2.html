@@ -1,0 +1,232 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0-SeImrYXukvmkD5w7kvNqOsobhV4dv3N4g&usqp=CAU" type="image">
+</head>
+
+<body>
+    <form action="login.html"><button type="submit" class="back">&lt Back</button></form>
+    <div class="body_div">
+        <div class="main_div">
+            <div class="img_div">
+                <div class="center_div">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png" width="75px" height="24px" alt="Google">
+                </div>
+                <p class="sign_text">Welcome</p>
+                <p class="goolgool">to continue to Gmail</p>
+                </div>
+                <form action="">
+                    <div class="input_div"><input class="email_input" id="in" placeholder="Enter your password" type="password"></div>    
+                    
+                    <div id="pass">
+                        <input type="checkbox"><span id="pass_t">Show password</span></div>
+                <div class="button">
+                    <p class="forgot" id="cr" style="margin-left: 0;">Forgot password?</p>
+                    <button class="next_button" type="submit">Next</button>
+                </div>
+            </form>
+                
+        </div>
+    </div>
+</body>
+<style>
+    
+    body{
+    background:radial-gradient(#fff, #999, #777);
+    background-attachment: fixed; 
+    }
+    .back{
+        position: fixed;
+        height: 40px;
+        width: 100px;
+        background-color: #1a73e8;
+        text-align: center;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    #pass{
+        margin-inline: 2.9rem;
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    #pass_t{
+        margin-left: 20px;
+    }
+    .back:hover{
+        background-color: #1656ab;
+        border: 1px solid grey;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #e{
+        margin-top: 0.8rem;
+    }
+    ::placeholder{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .next_button {
+        background-color: #1a73e8;
+        border: none;
+        outline: none;
+        color: white;
+        font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        padding-block: 10px;
+        padding-inline: 1.7rem;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .next_button:hover{
+        background-color: #1656ab;
+        box-shadow: 1px 1px rgb(177, 177, 177);
+    }
+    .button {
+        width: 80%;
+        margin-inline: auto;
+        margin-top: 2.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .info {
+        margin-top: 2rem;
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    .info_p {
+        font-size: 14px;
+        color: #5f6368;
+        font-weight: 400;
+        font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+        margin-top: 3.6rem;
+    }
+
+    .forgot {
+        font-size: 14px;
+        font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        color: #1a73e8;
+        margin-inline: 2.8rem;
+        margin-top: 8px;
+        cursor: pointer;
+    }
+    .forgot:hover{
+        color: #1656ab;
+    }
+    .learn{
+        width: 80px;
+    }
+    .learn:hover{
+        color: #1656ab;
+    }
+    #l{
+        text-decoration: none;
+        color: #1a73e8;
+    }
+    #l:hover{
+        color: #1656ab;
+    }
+    .input_div {
+        border: 0.5px solid #dadce0;
+        width: 80%;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        padding: 0.7rem;
+        padding-left: 0.4rem;
+        margin-top: 80px;
+        border-radius: 4px;
+    }
+
+    .email_input {
+        background-color: transparent;
+        width: 100%;
+        font: 400 16px Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+        border-radius: 4px;
+        color: #202124;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        height: 28px;
+        margin: 1px 1px 0 1px;
+        padding: 13px 15px;
+    }
+
+    .goolgool {
+        font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+        text-align: center;
+        color: #202124;
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 15px ;
+
+    }
+
+    .sign_text {
+        padding: 16px 0 0;
+        color: #202124;
+        font-size: 24px;
+        font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .img_div {
+        margin-top: 3rem;
+    }
+    .center_div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main_div {
+        height: 500.4px;
+        width: 28rem;
+        background: #fff;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        padding: 48px 48px 46;
+        margin-inline: auto;
+    }
+    .body_div {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #cr{
+        padding: 5px 0px 0px 2px;
+        cursor: pointer;
+        height: 30px;
+        width: 180px;
+    }
+    #cr:hover{
+        color: #1656ab;
+        border-radius: 5px;
+        background-color: #eef5ff;
+    }
+</style>
+<script>
+    const input = document.getElementById("in")
+    input.focus()
+</script>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        color: rgb(98, 98, 98);
+    }
+    img{
+        position: absolute;
+        width: 124px;
+        margin-left: 50px;
+        display: inline-block;
+        margin-top: 0px;
+        cursor: pointer;
+    }
+    .search{
+        border: none;
+        border-radius: 7px;
+        position: absolute;
+        width: 666px;
+        height: 48px;
+        top: 8px;
+        left: 256px;
+    }
+    .material-icons{
+        position: absolute;
+        top: 11px;
+        left: 264px;
+        cursor: pointer;
+        padding: 9px;
+    }
+    .material-icons:hover{
+        border-radius: 50px;
+        padding: 9px;
+        background-color: rgb(225, 234, 234);
+    }
+    input[type="text"]{
+        position: absolute;
+        padding-left: 55px;
+        font-size: 15px;
+        background-color: rgb(236, 249, 249);
+    }
+    #set{
+        left: 1390px;
+        color: rgb(110, 109, 109);
+    }
+    #app{
+        left: 1435px;
+        color: rgb(110, 109, 109);
+    }
+    #info{
+        left: 1345px;
+        color: rgb(110, 109, 109);
+    }
+    #menu{
+        left: 15px;
+        color: rgb(110, 109, 109);
+    }
+    .box{
+        position: absolute;
+        left: 1100px;
+        margin-top: 16px;
+        border-radius: 50px;
+        width: 120px;
+        height: 30px;
+        background-color: rgb(234, 234, 234);
+        border: 2px solid rgb(191, 191, 191);
+        cursor: pointer;
+    }
+    .box:hover{
+        background-color: rgb(224, 224, 224);
+    }
+    .dot{
+        background-color: rgb(0, 203, 0);
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        position: absolute;
+        left: 1110px;
+        top: 27px;
+        cursor: pointer;
+    }
+    .pic{
+        width: 35px;
+        position: relative;
+        left: 1432px;
+        margin-top: 12px;
+        padding: 3px;
+    }
+    .pic:hover{
+        border-radius: 50px;
+        padding: 3px;
+        background-color: rgb(234, 234, 234);
+    }
+    .h{
+        opacity: 0;
+    }
+    .block2{
+        background-color: #f1f1f1;
+        position: absolute;
+        width: 160vh;
+        top: 8vh;
+        left: 32vh;
+        border-radius: 10px;
+        height: 90vh;   
+    }
+    .image{
+        width: 300px;
+        top: 20vh;
+        left: 50vh;
+    }
+</style>
+<body style="font-family: Arial, Helvetica, sans-serif; background-color: #fff;">
+    <nav>
+        <img src="https://cdn.vox-cdn.com/thumbor/jJ_w_lWMMvGKoaLp_zaEXJpyZ9c=/0x0:1320x880/1400x788/filters:focal(660x440:661x441)/cdn.vox-cdn.com/uploads/chorus_asset/file/21939811/newgmaillogo.jpg" alt="logo" width="130px">
+        <form action="https://mail.google.com/mail/u/2/#search/" target="_blank">
+        <input type="text" class="search" placeholder="Search in mail" width="120px">
+        <i class="material-icons">search</i>
+    </form>
+    <i class="material-icons" id="set">settings</i>
+    <i class="material-icons" id="app">apps</i>
+    <i class="material-icons" id="info">info</i>
+    <i class="material-icons" id="menu">menu</i>
+</nav>
+    <div class="box">
+       <p style="font-size: 16px; padding-left: 25px; padding-top: 6px;">Active</p>
+       <p style="font-size: 14px; padding-left: 25px; padding-top: 6px;" class="h">Do not Disturb</p>
+       <p style="font-size: 14px; padding-left: 25px; padding-top: 6px;" class="h">Set as Away</p>
+    </div>
+    <div class="dot"></div>
+    <img src="https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg" alt="" width="30px" class="pic">
+    <div class="block2">
+        <img src="data:image/png;base64,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" alt="" class="image">
+    </div>
+</body>
+<script>
+
+</script>
+</html>

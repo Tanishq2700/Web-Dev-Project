@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0-SeImrYXukvmkD5w7kvNqOsobhV4dv3N4g&usqp=CAU" type="image">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<style>
+    @keyframes hide{
+        from{opacity: 1;} 
+        to{opacity: 0;
+        transform: translateY(100px);}
+    }
+    @keyframes show{
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+    @keyframes rotate {
+        from{translate: -120px;
+        opacity: 1;}
+        to{translate: 120px;
+        opacity: 1;}
+    }
+    body{
+    margin: 0;
+    padding: 0;
+    animation-name: show;
+    animation-duration: 1s;
+    }
+    .main{
+        position: absolute;
+        top: 180px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .google{
+        position: relative;
+        width: 380px;
+        top: 80px;
+        animation-name: hide;
+        animation-duration: 0s;
+        animation-delay: 22s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    .searchb{
+        width: 500px;
+        height: 45px;
+        position: absolute;
+        transform: translate(-20%,50%);
+        top: 240px;
+    }
+    #search:hover{
+        background-color:#f1f1f1;
+    }
+    input[type="text"]{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #d5d4d4;
+        left: 0;
+        border-radius: 50px;
+        padding: 0 40px 0 45px;
+        outline: none;
+        box-shadow: 0 2px 10px -7px #000;
+        font-size: 16px;
+        font-family: noto sans hk;
+    }
+    .searchicon{
+        position: absolute;
+        z-index: 1;
+        font-size: 21px;
+        top: 13px;
+        left: 18px;
+        color: #777;    
+        cursor: default;
+    }
+    .mic{
+        position: absolute;
+        width: 24px;
+        right: -30px;
+        top: 11px;
+        cursor: pointer;
+    }
+    nav{
+        float: right;
+        font-family: arial;
+        font-size: 14px;
+    }
+    .pic{
+        width: 35px;
+        border-radius: 50%;
+        border: 1px solid white;
+        transition: all 299ms;
+        margin: 10px 20px 0 0;
+    }
+    .pic:hover{
+        background: #000;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+
+    .navtext{
+        color: #444;
+        text-decoration: none;
+        top:    12px;
+        margin: 5px;
+        cursor: pointer;   
+    }
+    .navtext:hover{
+        text-decoration: underline;
+    }
+    .gmailText1{
+        position: absolute;
+        right: 240px;
+        top: 15px;
+    }
+    .gmailText2{
+        position: absolute;
+        right: 180px;
+        top: 15px;
+    }
+    .apps{
+        position: absolute;
+        top: 10px;
+        right: 130px;
+        color: #555;
+        cursor: pointer;
+        border: none;
+        border-radius: 50px;
+        padding: 6px;
+    }
+    .apps:hover{
+        background-color:#ebe8e8;
+        border-radius: 40px;
+        padding: 6px;
+    }
+    .cam{
+        position: absolute;
+        width: 32px;
+        right: -70px;
+        top: 6px;
+        cursor: pointer;
+    }
+    .b{
+        position: relative;
+        top: 70px;
+        left: 27%;
+        background: #ebe8e8;
+        border: none;
+        padding: 8px 20px;
+        margin: 10px;
+        color: #4e4d4d;
+        border-radius: 5px;
+        outline: none;
+    }
+    .b:hover{
+        background: #cdc8c8;
+        color: #000;
+        box-shadow: 0 0 2px #000;
+        cursor: pointer;
+    }
+    .grid{
+        background-color: cornflowerblue;
+        border: 2px solid black;
+        width: 20rem;
+        height: 25rem;
+        border-radius: 1rem;
+        position: relative;
+        top: 10%;
+        left: 78%;
+        right: 4rem;
+        top: 4rem;
+        transition: all 250ms;
+        opacity: 0;
+    }
+    #googleApps{
+        color: white;
+        background-color: #777;
+        position: absolute;
+        width: 5rem;
+        padding: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 1.5rem;
+        transition: all 250ms;
+        transition-delay: 1s;
+        font-size: 1rem;
+        top: 3.5rem;
+        opacity: 0;
+        border-radius: 5px;
+        font-family: arial;
+        font-size: small;
+    }
+    #voiceSearch{
+        color: white;
+        background-color: #777;
+        position: absolute;
+        width: 6rem;
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 31.5%;
+        top: 28rem;
+        transition: all 250ms;
+        transition-delay: 1s;
+        font-size:13px;
+        opacity: 0;
+        border-radius: 5px;
+        font-family: arial;
+    }
+    #acc{
+        font-family: arial;
+        font-size: medium;
+        background-color: #777;
+        width: 12rem;
+    }
+    .foot{
+        top: 287px;
+        position: relative;
+        color: #000;
+        /* background-color:#e6e4e4; */
+    }
+    .box{
+        background-color: #446eec;
+        border: none;
+        width: 100px;
+        height: 37px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+    }
+    .box:hover{
+        background-color: #2850ca;
+        box-shadow:1px 1px #515151;
+    }
+    .img2{
+        position: absolute;
+        width: 300px;
+        top: 260px;
+        opacity: 0;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        animation-name: show;
+        animation-duration: 1s;
+        animation-delay: 21s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+
+</style>
+<body>
+    
+    <nav>
+        <a href="gmail.html" target="_blank" class="navtext gmailText1" >Gmail</a>
+        <a href="https://www.google.co.in/imghp?hl=en&authuser=0&ogbl" class="navtext gmailText2" target="_blank">Images</a>
+        <span class="material-icons apps" id="gmail_button">apps</span>
+        <!-- <img src="https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg" alt="" width="30px" class="pic"> -->
+        <form action="login.html"><button type="submit" class="box">Sign in</button></form>
+        <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" alt="google" class="img2">
+    </nav>
+    <div class="main">
+        <img src="https://i.gifer.com/2P3e.gif" alt="image" class="google" width="300px">
+        <div class="searchb">
+        <span class="material-icons searchicon">search</span>
+        <form action="https://www.google.com/search">
+        <input type="text" placeholder="Search Google or type URL" name="q" id="search" autocomplete="off">
+        <button type="submit" class="b">Google Search</button>
+        <button type="submit" class="b">I'm Feeling Lucky</button>
+        </form>
+        <img src="https://i.pinimg.com/originals/ea/5f/5b/ea5f5bd3b4110f2afb958049b4096d3a.png" id="mic" alt="" class="mic">
+        <img src="https://play-lh.googleusercontent.com/G5oF0mhpOcQzFTrU6TDUL0JoAjzRt38weiZKua7L61WVT1z3dPcE9gUu-W2EwtM9cZU" alt="" class="cam">
+        </div>
+    </div>
+    <div class="grid" id="grid">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ullam officiis eum modi ab ipsum labore magni, aliquam perspiciatis, dolorum, ipsam sed accusantium!
+    </div>
+    <div id="googleApps">
+        Google apps
+    </div>
+    <div id="voiceSearch">
+        Search By Voice
+    </div>
+    <div class="foot">
+        <pre style="font-family: arial; padding-top: 15px;padding-left: 25px; font-size: 14px;">India</pre><hr>
+       <pre class="f" style="font-family: arial; font-size: 14px;padding-left: 25px;padding-top: 0px; display: inline-block;cursor: pointer; margin-top: 4px;"> About     Adverstising     Business      How search works </pre>
+       <pre style="display: inline-block; font-size: 14px; font-family: arial;text-align: right;margin-top: 4px;cursor: pointer;">                                                                                                                                                                                                                                                Privacy    Terms    Settings</pre>
+    </div>
+</body>
+<script>
+    const google_ind = document.getElementById("googleApps");
+    const dropdown_button = document.getElementById("gmail_button")
+    const dropdown = document.getElementById("grid")
+    const voiceSearch = document.getElementById("voiceSearch");
+    const micButton = document.getElementById("mic");
+    dropdown_button.onmouseover = e => {
+        google_ind.style.transitionDelay = "0.05s"
+        google_ind.style.opacity = 1
+    }
+    dropdown_button.onmouseleave = e => {
+        google_ind.style.transitionDelay = "0.25s"
+        google_ind.style.opacity = 0;
+    }
+    micButton.onmouseover = e => {
+        voiceSearch.style.transitionDelay = "0.05s"
+        voiceSearch.style.opacity = 1
+    }
+    micButton.onmouseleave = e => {
+        voiceSearch.style.transitionDelay = "0.15s"
+    voiceSearch.style.opacity = 0;
+    }
+    dropdown_button.onclick = e => {
+        if(dropdown.style.opacity == 0){
+            dropdown.style.opacity = 1
+        }
+        else{
+            dropdown.style.opacity = 0;
+        }
+    }
+    const input = document.getElementById("search")
+    input.focus()
+</script>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+</head>
+<style>
+    @keyframes rise{
+        0%{translate: 0px;
+        opacity: 0;}
+        100%{opacity: 1;
+        translate: 74vh;
+        transform: translateY(-62vh);
+        width: 300px;
+        height: 300px; 
+        background-color: rgb(255, 214, 11)}
+    }   
+    @keyframes change{
+        from{background-color: #000;}
+        to{background-color: rgb(7, 172, 218);
+        }
+    } 
+    @keyframes show{
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+    @keyframes big{
+        from{translate: 0;}
+        to{width: 24%;
+        opacity: 1;}
+    }
+    body{
+        background-color: #000;
+        width: 100vh;
+        background-attachment: fixed;
+        animation-name: change;
+        animation-delay: 3s;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+    }
+    .sun{
+        position: absolute;
+        width: 100px;
+        top: 688px;
+        height: 100px;
+        border-radius: 300px;
+        background-color: yellow;
+        opacity: 0;
+        animation-delay: 2s;
+        animation-name: rise;
+        animation-duration: 10s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    .google{
+        font-size: 50px;
+        position: absolute;
+        font-family: arial;
+        left: 79vh;
+        font-weight: bolder;
+        top: 40vh;
+        z-index: 9;
+        text-decoration: none;
+        color: #fff;
+        animation-name: show;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 12s;
+        opacity: 0;
+    }
+    .cloud{
+        width: 300px;
+        position: absolute;
+        top: 60vh;
+        animation-name: show;
+        animation-duration: 10s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-delay: 3s;
+    }
+    span{
+        position: absolute;
+        top: 47vh;
+        background-color: #ffffff;
+        color: #fff;
+        width: 0px;
+        height: 10px;
+        opacity: 0;
+        transition: all 1s;
+        border-radius: 1rem;
+        width: 30px;
+        left: 81vh;
+        animation-name: big;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-delay: 13s;
+    }
+    
+
+</style>
+<body>
+    <div class="sun"></div>
+    <div><a href="Google.html" class="google">GOOGLE</a></div>
+    <span></span>
+    <!-- <img src="https://www.transparentpng.com/thumb/clouds/wdjkOF-clouds-smoke.png" alt="" class="cloud"> -->
+</body>
+</html>
